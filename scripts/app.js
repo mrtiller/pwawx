@@ -154,6 +154,7 @@
       Math.round(humidity) + '%';
     card.querySelector('.current .wind .value').textContent =
       Math.round(wind.speed);
+    // TODO convert wind direction in degrees to compass heading
     card.querySelector('.current .wind .direction').textContent = wind.direction;
     var nextDays = card.querySelectorAll('.future .oneday');
     var today = new Date();
@@ -339,7 +340,6 @@
       }
     }
   };
-  // TODO uncomment line below to test app with fake data
   app.updateForecastCard(initialWeatherForecast);
 
   /************************************************************************
